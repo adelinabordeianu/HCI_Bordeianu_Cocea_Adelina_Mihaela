@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HCI Homework</title>
+</head>
+
+<body prefix="schema: http://schema.org/# sa: https://ns.science.ai/" itemscope itemtype="http://schema.org/WebPage">
+    <div id="articlecontent" itemscope itemtype="http://schema.org/WebPage">
+        <article resource="#" typeof="schema:ScholarlyArticle">
+            <header>
+                <h1 id="title">HCI Homework</h1>
+            </header>
+            <section id="authors" typeof="sa:AuthorsList">
+                <div role="contentinfo">
+                    <h2>By:</h2>
+                    <ul>
+                        <li typeof="sa:ContributorRole" property="schema:author">
+                            <span typeof="schema:Person">
+                                <meta property="schema:familyName" content="Bordeianu-Cocea" />
+                                <meta property="schema:givenName" content="Adelina" />
+                                <meta property="schema:additionalName" content="Mihaela" />
+                                <span property="schema:name">
+                                    Bordeianu Adelina
+                                </span>
+                                <a href="https://github.com/adelinabordeianu" itemprop="url">/GitHub</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section typeof="sa:Abstract">
+                <div role="doc-abstract">
+                    <p> ReStylist is a web application which offers you fabulous ideas when you have no idea what to
+                        wear in a rainy day, when you are in a rush or when you have an important interview and you want
+                        to make a good impression.
+
+                    </p>
+                </div>
+                <div role="doc-introduction">
+                    <h2 id="introduction">1. Introduction</h2>
+                    <p>
+                        ReStylist is a web application made for everyone who don't have so much time to put together an
+                        outfit that will look stylish and at the same time will draw attention. This application
+                        generates outfit pieces after an user will complete a formular with their tastes and
+                        preferences.
+                        The looks are made quick and easy with our users help, by choosing how they feel in that day:
+                        sad, happy, bored and so on; also by the weather.
+                        So, if it's raining, ReStylist will make sure that your outfit will include a raincoat.
+
+                    </p>
+                    <h3 id="introduction-purpose"> 1.1 Purpose</h3>
+                    <p> The purpose of this document is to present the functionalities of the web applications,
+                        ReStylist. It contains information about the way of using this application and the goals.
+
+                    </p>
+                    <h3 id="conventions">1.2 Conventions</h3>
+                    <ul>
+                        <li>The template used is <cite typeof="citation"><a
+                                    href="https://github.com/rick4470/IEEE-SRS-Tempate">IEEE System Requirements
+                                    Specification Template</a></cite>.</li>
+                        <li>The references will be in italic format. </li>
+                    </ul>
+                    <h3 id="audience">1.3 Audience</h3>
+                    <p> This document is dedicated for the users of this application, also for the author and anyone who
+                        is interested in this topic.
+                    </p>
+                    <h3 id="product-scope">1.4 Product Scope</h3>
+                    <p id="product-purpose">
+                        This web application scope is to optimise the time used by choosing an outfit in different
+                        situations: at work, on vacation, a wedding, a party.
+
+                    </p>
+                    <p id="product-benefits">
+                        Our users will define their own style and increase their imagination by combining in a unique
+                        way pieces of clothing that you already have in your closet.
+                    </p>
+                    <p id="product-goals">
+                        The goal of the application is to make sure that the users are happy with the results by
+                        starting their day with less concerns about what to wear.
+
+                    </p>
+                    <h3 id="product-references" typeof="schema:ReferenceList">1.5 References</h3>
+                    <ul>
+                        <li typeof="schema:ScholarlyArticle"
+                            resource="https://profs.info.uaic.ro/~busaco/teach/courses/hci/">
+                            <span property="schema:author" typeof="schema:Person">
+                                <span property="schema:familyName">Buraga</span>
+                                <span property="schema:givenName">Sabin</span>
+                                <span property="schema:additionalName">Corneliu</span>
+                            </span>
+                            <cite property="schema:citation"><a
+                                    href="https://profs.info.uaic.ro/~busaco/teach/courses/hci/">HCI
+                                    site</a>.</cite>
+                        </li>
+                        <li typeof="schema:ScholarlyArticle"
+                            resource="https://github.com/rick4470/IEEE-SRS-Tempate#14-product-scope">
+                            <span property="schema:author" typeof="schema:Person">
+                                <span property="schema:familyName">H.</span>
+                                <span property="schema:givenName">Rick</span>
+                                <span property="schema:url"><cite typeof="citation"><a
+                                            href="https://github.com/rick4470">/Rick's GitHub</a></cite></span>
+                            </span>
+                            <cite property="schema:citation"><a
+                                    href="https://github.com/rick4470/IEEE-SRS-Tempate#14-product-scope">/IEEE-SRS-Template</a>.</cite>
+                        </li>
+                        <li typeof="schema:ScholarlyArticle" resource="https://w3c.github.io/scholarly-html">
+                            <span property="schema:name">Scholarly HTML</span>
+                            <cite property="schema:citation">
+                                <a href="https://w3c.github.io/scholarly-html">/Scholarly HTML Guide
+                                </a>
+                            </cite>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section typeof="sa:MaterialsAndMethods">
+                <h2>2. Overall Description</h2>
+                <h3 id="overall">2.1 Product Perspective</h3>
+                <p>
+                    ReStylist is a web application made in order to achieve BSc
+                    (Bachelor of Science) title within the Faculty of Computer Science Iași.
+
+                </p>
+                <figure typeof="sa:image">
+                    <img src="./design/sketch.png" alt="Sketch" class="diagrama" />
+                    <figcaption class="caption-diagrama">First sketch of the Home page</figcaption>
+                </figure>
+                <h3>2.2 Product Functions</h3>
+                <p> The application has the following functionalities: creating an account which includes
+                    a form with multiple fields, some of them referring mostly to the style and preferences
+                    that the user has in fashion and color palette, login to the application with an email address
+                    and a password, a generator which compose an outfit according to weather, mood and the style which
+                    the user wants to approach that day. Another functionalitie is visioning the whole outfit on a
+                    mannequin to get an idea of what all the pieces will look like together.
+                </p>
+                <h3>2.3 User Classes and Characteristics</h3>
+                <p> The application can be used by every person who doesn't have that much
+                    time to put together an outfit that will look good and reflect their own
+                    personality and mood. It can be used mostly by women because the design
+                    is meant to attract the feminine side.
+                </p>
+                <p> Various personas interacting to the system:</p>
+                <p>
+                <ol>
+                    <li>
+                        <p>Name: Anais Popa</p>
+                        <p>Date of birth: 10/25/1980</p>
+                        <p>Gender: Female</p>
+                        <p>Location: Iasi, Romania</p>
+                        <p>Work Place: BRD Bank</p>
+                        <p>School: Faculty of economics and business administration</p>
+
+
+                        <p>Main Points: Anais Popa is a mother who has 3 kids: 2 twin boys and one girl, so she doesn't
+                            have the neccesary time to be careful of what she's wearing everytime. At work she needs to
+                            wear
+                            an office outfit to look professional and clean, but her routine is: she's waking up at 6 am
+                            to
+                            drink her coffee and do her makeup. After that, at 7 am she needs to wake up her kids to get
+                            ready for school and make their breakfast, all of that in 30 minutes so she could get at
+                            7:40 at
+                            school and then at 8 at the bank. Her experience with clothing in relative the same as every
+                            normal person, once a month or even less often she goes at the mall for a shopping spree.
+                            Even
+                            in that moment she doesn't have enough time for her because she needs to take care for her
+                            kids
+                            too.</p>
+
+                        <p>Goals:
+                            She have never used this kind of application before, so this kind of design and approach
+                            sounds
+                            good to her. The idea that she can get a full outfit in minutes it'a a saviour. She could
+                            get
+                            more sleep and organize better.</p>
+
+                        <p>Frustrations and Pain Points:
+
+                            The difficulties that Anais can have are the lack of an article or not feeling satisfied
+                            with
+                            the outfit and be forced to do all the steps again.</p>
+
+                        <p>Scenarious:
+
+                            It's sunday and Anais needs to go her sister's birthday which is taking place at a pasta
+                            restaurant, so she needs to put together a casual outfit yet feminine. Of course, before
+                            that
+                            she has to get her kids ready and after that maybe she has 5-10 minutes to choose something
+                            to
+                            wear.
+                            But here it comes ReStylist. First she's logs in to the application after that she press the
+                            "My
+                            style" button and first of all, she sees on the first page that the weather it's sunny,
+                            she's
+                            choosing the way she feels by an emoji listed on the second page, after that the kind of
+                            outfit
+                            that she wants to be generated (casual). After all these steps in a few seconds she gets an
+                            image with how her outfit should look. If she doesn't have a piece of clothing that appears
+                            in
+                            the generated outfit she can anytime replace it with something else.</p>
+
+                    </li>
+                    <li>
+                        <p>Name: Name: Alina Georgescu</p>
+                        <p>Date of birth: 4/14/1997</p>
+                        <p>Gender: Female</p>
+                        <p>Location: Bucuresti, Romania</p>
+                        <p>Work Place: instagram influencer and UI designer</p>
+                        <p>School: Faculty of Computer Science</p>
+
+
+                        <p>Main Points: Alina is a UI Designer who travels 4-8 times each month for work. She has a
+                            specific regions in which she travels, and she often visits the same cities and stays at the
+                            same hotel. She is frustrated by the fact that no matter how frequently she takes similar
+                            trips, she spends hours of her day booking travel and making her luggage, so she looses a
+                            lot of time trying to put together outfits for the trip.</p>
+
+                        <p>Goals:
+                            She wants to get an outfit for every single day of her trip so she could have more time to
+                            visit the city and to focus on her work. She wants comfortable and simple looks that does
+                            not require such fancy pieces of clothing. </p>
+
+                        <p>Frustrations and Pain Points:
+
+                            The difficulties that Alina have are the process of choosing what to put in the luggage; she
+                            really dislikes that. Also, she spends a lot of money on these trips so she can't afford
+                            unique and high-end pieces of clothing.</p>
+
+                        <p>Scenarious:
+
+                            It's summer and it's time for Alina to travel to Paris in France for 5 days. She has an
+                            important meeting on the second day, so she needs something feminime and classy but at the
+                            same time comfortable because it's really hot. She opens the app and she starts to generate
+                            an outfit based on these criteria.
+                        </p>
+
+                    </li>
+                    <li>
+                        <p>Name: Maria Alexandrescu</p>
+                        <p>Date of birth: 7/22/1999</p>
+                        <p>Gender: Female</p>
+                        <p>Location: Iasi, Romania</p>
+                        <p>Work Place: Student</p>
+                        <p>School: Faculty of Arhitecture</p>
+
+
+                        <p>Main Points: Maria is in introvert and a shy girl. She is studying at Faculty of Arhitecture
+                            so she got a lot of projects to do and also she's occasionally helping her mother who is an
+                            arhitech trying to learn as much as possible. She's waking up almost everyday at 7 am and
+                            rush to the college, so she doesn't have enough time to put together an outfit for it even
+                            though she loves fashion and wants to be fashionable. </p>
+
+                        <p>Goals:
+                            She wants an app that will generate her complex looks for her dressy style that way she will
+                            get much more confidence and make her feel good about herself. </p>
+
+                        <p>Frustrations and Pain Points:
+
+                            The difficulties that Maria have are lack of time and confidence.</p>
+
+                        <p>Scenarious:
+
+                            Today Maria has an important presentation at the college at 8:30 am and it's already 7:20
+                            and she needs an outfit idea as soon as possible. She opens the app, she logs in and she
+                            follows those 3 steps to generate a dressy outfit for her presentation. It's raining later
+                            that day so her generated outfit includes a raincoat and an umbrella. In 5 minutes she's
+                            ready to go out and take the buss to college. </p>
+
+                    </li>
+                    <li>
+                        <p>Name: Carmen Mihailescu</p>
+                        <p>Date of birth: 11/30/1984</p>
+                        <p>Gender: Female</p>
+                        <p>Location: Cluj-Napoca, Romania</p>
+                        <p>Work Place: Fiancé consultant</p>
+                        <p>School: Faculty of Economisc</p>
+
+
+                        <p>Main Points: Carmen is working at an important company in Cluj-Napoca as a fiancé consultant
+                            and she's collaborating with a lot of people so she needs to look professional and inspire
+                            confidence. At this company there is a dress code and everybody needs to have a flawless
+                            clean look and the outfit must include a shirt. </p>
+
+                        <p>Goals:
+                            She wants an app that will save her hours of trying clothes and choosing combinations that
+                            will be part of the dress code and at the same time feel comfortable.. </p>
+
+                        <p>Frustrations and Pain Points:
+
+                            She finds difficulties to choose what to wear for the day, she's not sure what to match
+                            trying a lot of combinations and she's taking a lot of time on deciding what to wear so
+                            usually she wears the same clothes which she wore 2-3 days back.</p>
+
+                        <p>Scenarious:
+
+                            It is an important day at work for Carmen. She will have a chat with her boss about a raise
+                            and she wants something that feel make her look professional and worthy, so she opens the
+                            app and chooses an office outfit that will impress her colleagues and most importantly her
+                            boss. </p>
+
+                    </li>
+                </ol>
+                </p>
+                <h3 id="operating-environment">2.4 Operating Environment</h3>
+                <p>
+                    The application is made to work on any device that has a web browser.
+                </p>
+                <h3 id="Constraints">2.5 Design and Implementation Constraints</h3>
+                <p>
+                    The user interface was created by using Angular which
+                    includes HTML, CSS AND JavaScript. The backend implementation
+                    was made using .Net and the data for users and clothes are stored in a non-relational database using
+                    Amazon Web Services.
+
+                </p>
+                <h3 id="documentation">2.6 User Documentation</h3>
+                <p> The user documentation regarding the purpose of the application is
+                    found in the "About" section.
+
+                </p>
+                <h3>2.7 Assumptions and Dependencies</h3>
+                <p>
+                    The way this app works can be affected by different types
+                    of broswers or screen rezolution.
+
+                </p>
+            </section>
+            <section typeof="sa:MaterialsAndMethods">
+                <h2>3. External Interface Requirements</h2>
+                <h3 id="user-interface">3.1 User Interfaces</h3>
+                <ul>
+                    <li>
+                        <h4>Home page</h4>
+                        <figure typeof="sa:image">
+                            <img src="./design/home_page.png" alt="Home page" />
+
+                        </figure>
+                    </li>
+                    <li>
+                        <h4>About</h4>
+                        <figure typeof="sa:image">
+                            <img src="./design/about.png" alt="About" />
+
+                        </figure>
+                    </li>
+                    <li>
+                        <h4>My Style</h4>
+                        <figure typeof="sa:image">
+                            <img src="./design/my_style.png" alt="My Style" />
+                        </figure>
+                        <figure typeof="sa:image">
+                            <img src="C./design/my-style2.png" alt="My Style2" />
+                        </figure>
+                    </li>
+                </ul>
+                <h3 id="hardware-interface">3.2 Hardware interface</h3>
+                <p>
+                    The application doesn't require any hardware interface.
+
+                </p>
+                <h3 id="software-interface">3.3 Sofware interface</h3>
+                <p>
+                    The application will communicate with a database (Amazon web services) to introduce users and
+                    clothing pieces, also to extract information about these two.
+
+                </p>
+                <h3 id="communications-interface">3.4 Communications interface</h3>
+                <p>The register method will include a form which in the end, after de "Register" button will be pressed,
+                    it will send a confirmation email to the user to validate the account created.
+                    Also, the users's accounts will pe protected using the identity framework from .Net.
+
+                </p>
+            </section>
+            <section typeof="sa:MaterialsAndMethods">
+                <h2 id="system-features">4. System Features</h2>
+                <h3 id="first-feature">4.1 The register/login feature</h3>
+                <h4 id="first-feature-1">4.1.1 Priority and description</h4>
+                <p>
+                    Any user who wants to benefit from application's features needs to fill a form, then to validate the
+                    email address. After these two steps the email address and the password will be stored in the
+                    database.
+                    The priority of these features is high
+                    because users can't generate an outfit if they don't have an account.
+                </p>
+
+                <h3 id="second-feature">4.2 The outfit customizer</h3>
+                <h4 id="second-feature-1">4.2.1 Priority and description</h4>
+                <p>
+                    After the users login to the application they can press the "My Style" button which is placed in the
+                    navigation bar and they will be redirected to a page that shows them the weather that day. On this
+                    page it would be
+                    a call to action button which will redirect them to another page that includes a series of emoji
+                    reflecting their mood.
+                    After selecting an emoji, the user will be redirected to the next page where is a list of styles
+                    that the user would want to approach: casual, sporty,
+                    elegant and so on. Finally after completing these 3 steps, the final outfit will be generated and
+                    shown on a mannequin.
+
+                </p>
+                <p>
+                    The priority of this feature is high because it represent the main feature of the application.
+                </p>
+            </section>
+            <section typeof="sa:MaterialsAndMethods">
+                <h2>5. Other Nonfunctional Requirements</h2>
+                <h3 id="Performance">5.1 Performance Requirements</h3>
+                <p>
+                    The application objective is generating an putfit as fast as possible and to satisfy the users
+                    expectations.
+
+                </p>
+                <h3 id="Safety">5.2 Safety Requirements</h3>
+                <p>
+                    There is no damage or loss of data because everything is generated by the system.
+
+                </p>
+                <h3 id="Security">5.3 Security Requirements</h3>
+                <p>
+                    The passwords will be encypted with the identity framwork from .Net, so this will prevent data
+                    fraud. The only information about the user that will be
+                    diplayed is the username.
+
+                </p>
+                <h3>5.4 Software Quality Attributes</h3>
+                <p>
+                    The user interface is friendly and easy to use. The maintenance of the application will be exxecuted
+                    by the developer including updating the data from the database.
+
+                </p>
+                <h3>5.5 Business Rules</h3>
+                <p>
+                    The only persons who can update the features of the application are the author and possible
+                    contributors.
+
+                </p>
+            </section>
+
+            <h2>Analysis Models</h2>
+            <figure typeof="sa:image">
+                <h3>The diagram of the application</h3>
+                <img src="./design/diagrama.png" />
+
+            </figure>
+
+            <h1>Questions, Options, Criteria</h1>
+            <figure typeof="sa:image">
+                <img src="./design/QOC1.png" />
+            </figure>
+            <figure typeof="sa:image">
+                <img src="./design/QOC2.png" />
+            </figure>
+            <figure typeof="sa:image">
+                <img src="./design/QOC3.png" />
+
+            </figure>
+            <h1>Wireframes</h1>
+            <figure typeof="sa:image">
+                <img src="./design/home-wireframe.png" height="600" width="1100" />
+            </figure>
+            <figure typeof="sa:image">
+                <img src="./design/about-wireframe.png" height="833"
+                    width="1000" />
+            </figure>
+            <figure typeof="sa:image">
+                <img src="./design/setup-wireframe.png" height="833"
+                    width="1000" />
+
+            </figure>
+            <figure typeof="sa:image">
+                <img src="./design/setup-wireframe2.png" />
+            </figure>
+            <figure typeof="sa:image">
+                <img src="./design/contact-wireframe.png" />
+
+            </figure>
+            <section typeof="sa:ReferenceList">
+                <h2>References</h2>
+                <ol>
+                    <li typeof="schema:ScholarlyArticle" resource="https://www.figma.com/">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Figma</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://flexboxfroggy.com/#ro">https://www.figma.com/</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+
+                    <li typeof="schema:ScholarlyArticle"
+                        resource="https://uxdesign.cc/importance-of-colors-on-your-website-and-logo-b5468e9f0a10">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Importance of colors on your website</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a
+                                        href="https://uxdesign.cc/importance-of-colors-on-your-website-and-logo-b5468e9f0a10">https://uxdesign.cc/importance-of-colors-on-your-website-and-logo-b5468e9f0a10</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+
+                    <li typeof="schema:ScholarlyArticle" resource="https://profs.info.uaic.ro/~stefan.negru/personas/">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Scholarly HTML Person</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://profs.info.uaic.ro/~stefan.negru/personas/">Person Template </a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+
+
+                    <li typeof="schema:ScholarlyArticle" resource="https://github.com/rick4470/IEEE-SRS-Tempate">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Template document Scholarly HTML</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://github.com/rick4470/IEEE-SRS-Tempate">IEEE-SRS-Tempate</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+
+                    <li typeof="schema:ScholarlyArticle" resource="https://whimsical.com/qoc3-7dfUFNLSLz77gihC3ARTHg">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Creating QOC and the sketches</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://whimsical.com/qoc3-7dfUFNLSLz77gihC3ARTHg">Build your own sketches</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li> 
+
+                    <li typeof="schema:ScholarlyArticle" resource="https://unsplash.com/">
+                        <span typeof="schema:Thing">
+                            <span property="schema:name">Photos and images</span>
+                            <span property="schema:url">
+                                <cite typeof="citation">
+                                    <a href="https://unsplash.com/">Click here</a>
+                                </cite>
+                            </span>
+                        </span>
+                    </li>
+
+                </ol>
+                <h2>Contributors</h2>
+                <ul id="contributii">
+                    <li>
+                        Scholarly Document
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Bordeianu</span>
+                                    <span property="schema:givenName">Adelina</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Diagrams, sketches, wireframes, personas
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Bordeianu</span>
+                                    <span property="schema:givenName">Adelina</span>
+
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Application Design
+                        <ul>
+                            <li>
+                                <span property="sa:ContributorRole" typeof="schema:Person">
+                                    <span property="schema:familyName">Bordeianu</span>
+                                    <span property="schema:givenName">Adelina</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </div>
+</body>
+
+</html>
